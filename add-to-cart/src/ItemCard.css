@@ -1,0 +1,113 @@
+/* ItemCard.css */
+
+/* Import Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.card-container {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card {
+    padding: 0;
+    overflow: hidden;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.card-body {
+    text-align: center;
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-price {
+    font-size: 1.25rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 0.875rem; /* Reduced font size for description */
+    margin-bottom: 1.5rem;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-radius: 3px;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Card */
+.card-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-container:hover .card-img-top {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Button */
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.125rem; /* Slightly smaller font size for smaller screens */
+    }
+
+    .card-price {
+        font-size: 1.125rem; /* Slightly smaller font size for smaller screens */
+    }
+
+    .card-text {
+        font-size: 0.75rem; /* Further reduced font size for smaller screens */
+    }
+
+    .btn-success {
+        font-size: 0.875rem; /* Slightly smaller font size for buttons on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-title {
+        font-size: 1rem; /* Adjusted font size for very small screens */
+    }
+
+    .card-price {
+        font-size: 1rem; /* Adjusted font size for very small screens */
+    }
+
+    .card-text {
+        font-size: 0.6875rem; /* Further reduced font size for very small screens */
+    }
+
+    .btn-success {
+        font-size: 0.75rem; /* Adjusted font size for very small screens */
+    }
+}

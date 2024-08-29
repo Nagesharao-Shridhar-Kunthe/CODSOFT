@@ -1,0 +1,65 @@
+/* Home.css */
+
+body {
+    background-color: #2c2c2c; /* Dark gray background that complements white cards */
+    color: #ffffff; /* Ensures text color is readable against the dark background */
+    font-family: 'Roboto', sans-serif; /* Applies Roboto font throughout the page */
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* Ensures the title stands out against the background */
+}
+
+.section-container {
+    padding: 2rem 1rem; /* Adjusted padding for better spacing on smaller screens */
+}
+
+.row-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.5rem; /* Adjusted space between cards */
+    margin: 0 auto; /* Centers the entire row */
+    max-width: 100%; /* Ensures that the row doesn't exceed the container width */
+}
+
+.card-container {
+    flex: 1 1 calc(25% - 2rem); /* Adjusts the width of each card */
+    max-width: 280px; /* Sets a maximum width for each card */
+    margin-bottom: 2rem; /* Adjusted bottom margin */
+}
+
+/* Responsive Styles for Smaller Screens (e.g., iPhone 14) */
+@media (max-width: 768px) {
+    .card-container {
+        flex: 1 1 calc(50% - 1rem); /* 2 cards per row on smaller screens */
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .page-title {
+        font-size: 1.5rem; /* Adjusted font size for smaller screens */
+    }
+
+    .section-container {
+        padding: 1.5rem 0; /* Adjusted padding */
+    }
+
+    .row-container {
+        gap: 1.5rem; /* Reduced space between cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        flex: 1 1 100%; /* 1 card per row on very small screens */
+        margin-bottom: 1.5rem; /* Adjusted bottom margin */
+    }
+
+    .page-title {
+        font-size: 1.25rem; /* Further adjusted font size for very small screens */
+    }
+}

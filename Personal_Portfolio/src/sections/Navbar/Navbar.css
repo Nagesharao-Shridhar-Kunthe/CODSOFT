@@ -1,0 +1,72 @@
+/* src/components/Navbar/Navbar.css */
+
+/* Default (light theme) styles */
+:root {
+    --navbar-text-color: #000; /* Black text for light theme */
+    --navbar-bg-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    --navbar-hover-color: #1e90ff; /* Hover color */
+    --navbar-underline-color: #1e90ff; /* Underline color */
+  }
+  
+  /* Dark theme styles */
+  body.dark-theme {
+    --navbar-text-color: #fff; /* White text for dark theme */
+    --navbar-bg-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  }
+  
+  .navbar {
+    background-color: var(--navbar-bg-color); /* Use the background color variable */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    height:15px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Smooth transition when switching themes */
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20%;
+  }
+  
+  .navbar li {
+    margin-left: 30px; /* Increased spacing between items */
+    cursor: pointer;
+    color: var(--navbar-text-color);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar li:hover {
+    color: var(--navbar-hover-color); /* Hover color remains the same */
+  }
+  
+  .navbar li::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: var(--navbar-underline-color);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .navbar li:hover::after {
+    width: 100%;
+  }
+ 
+  
